@@ -6,9 +6,13 @@ function reverseString(str) {
     return reversedStr;
 }
 
+console.log(reverseString("hello"));
+
 function reverseString1(str) {
     return str
         .split("")
         .reverse()
         .join("");
 }
+
+console.log(reverseString1("hello"));

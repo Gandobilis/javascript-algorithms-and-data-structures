@@ -4,5 +4,5 @@ function convertCtoF(celsius) {
 }
 
 // Change the inputs below to test your code
-convertCtoF(30);
+console.log(convertCtoF(30));
 
