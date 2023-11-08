@@ -20,14 +20,22 @@ function mutationEvery(arr) {
 
 console.log(mutationEvery(["hello", "hey"]));
 
-function mutationTernary([target, test], i = 0) {
+function mutationRecursive([target, test], i = 0) {
     target = target.toLowerCase();
     test = test.toLowerCase();
     return i >= test.length
         ? true
         : !target.includes(test[i])
             ? false
-            : mutation([target, test], i + 1);
+            : mutationRecursive([target, test], i + 1);
 }
 
-console.log(mutationTernary(["hello", "hey"]));
+console.log(mutationRecursive(["hello", "hey"]));
+
+function mutationRegExp([elem1, elem2]) {
+    const regex = new RegExp(`[^${elem1}]`, 'i');
+    return !regex.test(elem2);
+}
+
+console.log(mutationRegExp(["hello", "hey"]));
+
